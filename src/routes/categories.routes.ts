@@ -1,8 +1,8 @@
 import { Router } from "express";
 import { CategoriesControllers } from "../controllers/categories.controllers";
-import { ValidateBody } from "../middlewares/validateBody";
+import { ValidateBody } from "../middlewares/validateBody.midlewares";
 import {  categoryBodySchema } from "../schemas/createCategory.schema";
-import { DoesCategoryExistToDelete } from "../middlewares/doesCategoryExistToDelete";
+import { DoesCategoryExistToDelete } from "../middlewares/doesCategoryExistToDelete.midlewares";
 
 
 export const categoriesRouter = Router();

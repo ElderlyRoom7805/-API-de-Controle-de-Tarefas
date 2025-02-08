@@ -1,8 +1,7 @@
 import { Request, Response } from "express";
 import { TasksServices } from "../services/tasks.services";
-import { container, injectable } from "tsyringe";
+import { container } from "tsyringe";
 
-@injectable()
 export class TasksControllers{
     async createTask(req: Request, res: Response): Promise<Response>{
         const tasksServices = container.resolve(TasksServices);

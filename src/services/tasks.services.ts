@@ -1,6 +1,9 @@
 import { prisma } from "../database/prisma";
 import { taskReturnSchema } from "../schemas/return.schema";
 import { createTaskBodyInterfaces, updateTaskBodyInterface } from "../interfaces/tasks.interfaces";
+import { injectable } from "tsyringe";
+
+@injectable()
 export class TasksServices{
     async createTask(body: createTaskBodyInterfaces){
         return await prisma.task.create({ data: body })
